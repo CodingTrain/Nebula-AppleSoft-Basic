@@ -34,13 +34,11 @@ To sign up for Nebula Classes: [http://nebulaclasses.com/codingtrain](http://neb
 10. Arrays
 11. Functions
 12. Putting It All Together
-
-- [Typing Tutor](https://www.old-computers.com/museum/software_detail.asp?c=18&st=1&id=728)
-- [ASCII Table](https://www.asciitable.com/)
-- [Unicode](https://home.unicode.org/)
-- [VSCode](https://code.visualstudio.com/)
-- [Play the Typing Tutor Game!](https://editor.p5js.org/codingtrain/full/YRNyv1Hsl)
-
+    - [Typing Tutor](https://www.old-computers.com/museum/software_detail.asp?c=18&st=1&id=728)
+    - [ASCII Table](https://www.asciitable.com/)
+    - [Unicode](https://home.unicode.org/)
+    - [VSCode](https://code.visualstudio.com/)
+    - [Play the Typing Tutor Game!](https://editor.p5js.org/codingtrain/full/YRNyv1Hsl)
 13. Conclusion
     - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
     - [Python](https://www.python.org/)
