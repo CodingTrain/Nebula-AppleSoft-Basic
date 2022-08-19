@@ -1,6 +1,6 @@
 # Nebula Class - What is Code?
 
-![A bearded man wearing a blue shirt resting his head on his fist, sitting next to an Apple II+ Computer. The text reads "What is code? with Daniel Shiffman (The Coding Train). Nebula Classes.](img/what_is_code.jpg)
+<img alt="A bearded man wearing a blue shirt resting his head on his fist, sitting next to an Apple II+ Computer. The text reads: What is code? with Daniel Shiffman (The Coding Train). Nebula Classes." src="img/what_is_code.jpg" width = "600">
 
 This repository includes all the source code and related links/resources mentioned in the videos.
 
