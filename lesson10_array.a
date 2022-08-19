@@ -1,0 +1,5 @@
+10 DIM X(99)
+20 FOR I = 0 TO 99
+30 X(I) = 5 + I * 5
+40 PRINT X(I)
+50 NEXT I
