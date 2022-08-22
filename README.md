@@ -6,6 +6,8 @@ This repository includes all the source code and related links/resources mention
 
 To sign up for Nebula Classes: [http://nebulaclasses.com/codingtrain](http://nebulaclasses.com/codingtrain)
 
+This repository also contains [the accompanying source code for the Snake Game](snake) from the Coding Challenge YouTube video (link to come).
+
 ## Outline
 
 1. Introduction
