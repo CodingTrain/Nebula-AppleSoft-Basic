@@ -1,0 +1,67 @@
+ 10 HGR : HGR2 
+ 12 SZ = 50 : CX = 140 : CY = 96
+ 15 SC = 0
+ 18 ANGLE = 0
+ 20 DIM PTS(7,2)
+ 25 DIM RZP(7,2) : DIM RYP(7,2) : DIM RXP(7,2)
+ 30 GOSUB 5000
+ 
+ 100 REM DRAW LOOP
+ 105 CALL 62450
+ 110 GOSUB 2000 : REM ROTATE POINTS
+ 120 GOSUB 6000 : REM LINES
+ 140 ANGLE = ANGLE + 0.1
+ 150 GOSUB 1000
+ 160 GOTO 100
+ 
+ 500 X1 = RYP(A,0) * SZ + CX
+ 510 Y1 = RYP(A,1) * SZ + CY
+ 520 X2 = RYP(B,0) * SZ + CX
+ 530 Y2 = RYP(B,1) * SZ + CY
+ 540 HPLOT X1,Y1 TO X2,Y2
+ 550 RETURN 
+ 
+ 1000 SC = NOT SC
+ 1010 POKE 49236 + NOT SC,0
+ 1020 POKE 230,32 + 32 * SC
+ 1030 RETURN 
+ 
+ 2000 CS = COS(ANGLE)
+ 2010 SN = SIN(ANGLE)
+ 2020 FOR N = 0 TO 7
+ 2030 RZP(N,0) = -CS * PTS(N,0) + SN * PTS(N,1) +  0 * PTS(N,2)
+ 2040 RZP(N,1) =  SN * PTS(N,0) + CS * PTS(N,1) +  0 * PTS(N,2)
+ 2050 RZP(N,2) =   0 * PTS(N,0) +  0 * PTS(N,1) +  1 * PTS(N,2)
+ 2060 RYP(N,0) =  CS * RZP(N,0) +  0 * RZP(N,1) + SN * RZP(N,2)
+ 2070 RYP(N,1) =   0 * RZP(N,0) +  1 * RZP(N,1) +  0 * RZP(N,2)
+ 2080 RYP(N,2) = -SN * RZP(N,0) +  0 * RZP(N,1) + CS * RZP(N,2)
+ 2090 RXP(N,0) =  RYP(N,0)
+ 2100 RXP(N,1) =  CS * RYP(N,1) - SN * RYP(N,2)
+ 2110 RXP(N,2) =  SN * RYP(N,1) + CS * RYP(N,2)
+ 2120 NEXT N
+ 2130 RETURN 
+ 
+ 5000 PTS(0,0) = -1: PTS(0,1) = -1 : PTS(0,2) = -1
+ 5010 PTS(1,0) =  1: PTS(1,1) = -1 : PTS(1,2) = -1
+ 5020 PTS(2,0) =  1: PTS(2,1) =  1 : PTS(2,2) = -1
+ 5030 PTS(3,0) = -1: PTS(3,1) =  1 : PTS(3,2) =  - 1
+ 5040 PTS(4,0) = -1: PTS(4,1) = -1 : PTS(4,2) = 1
+ 5050 PTS(5,0) =  1: PTS(5,1) = -1 : PTS(5,2) = 1
+ 5060 PTS(6,0) =  1: PTS(6,1) =  1 : PTS(6,2) = 1
+ 5070 PTS(7,0) = -1: PTS(7,1) =  1 : PTS(7,2) = 1
+ 5080 RETURN 
+
+ 6000 REM DRAW LINES
+ 6010 A = 0 : B = 1 : GOSUB 500
+ 6020 A = 1 : B = 2 : GOSUB 500
+ 6030 A = 2 : B = 3 : GOSUB 500
+ 6040 A = 3 : B = 0 : GOSUB 500
+ 6050 A = 4 : B = 5 : GOSUB 500
+ 6060 A = 5 : B = 6 : GOSUB 500
+ 6070 A = 6 : B = 7 : GOSUB 500
+ 6080 A = 7 : B = 4 : GOSUB 500
+ 6090 A = 0 : B = 4 : GOSUB 500
+ 6100 A = 1 : B = 5 : GOSUB 500
+ 6110 A = 2 : B = 6 : GOSUB 500
+ 6120 A = 3 : B = 7 : GOSUB 500
+ 6130 RETURN 
