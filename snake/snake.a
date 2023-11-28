@@ -32,6 +32,7 @@
 3030 GOSUB 1000
 3040 IF X(L) = FX AND Y(L) = FY THEN GOSUB 4000
 3050 FOR I = 1 TO L
+3059 REM 3060 - Adds collision detection for walls (errors when snake hits walls)
 3060 HTAB X(I) : VTAB Y(I)
 3070 PRINT "S"
 3080 NEXT I
